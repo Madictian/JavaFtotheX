@@ -1,14 +1,11 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 
@@ -18,20 +15,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-       /* Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        //Button btOK = new Button("Click here Cunt!");
-        //Scene scene = new Scene(btOK, 600, 550);
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("uitest.fxml"));
 
-        StackPane pane = new StackPane();
-        pane.getChildren().add(new Button("OK"));
-        Scene scene = new Scene(pane, 600, 550);
+        Scene scene = new Scene(root, 600, 600);
         primaryStage.setTitle("Hello Cunt");
         primaryStage.setScene(scene);
-        primaryStage.show();*/
+        primaryStage.show();
+
+        Stage stage1 = new Stage();
+        Scene scene1 = new Scene(root1, 600, 600);
+        stage1.setTitle("Hello Cunt");
+        stage1.setScene(scene1);
+        stage1.show();
 
 
 
-        Stage stage = new Stage();
+
+       /* Stage stage = new Stage();
         stage.setTitle("Bastard!");
         Pane pane1 = new Pane();
 
@@ -48,7 +49,7 @@ public class Main extends Application {
         Scene scene1 = new Scene(pane1, 300, 300);
         stage.setTitle("Bastard!");
         stage.setScene(scene1);
-        stage.show();
+        stage.show();*/
     }
 
 
